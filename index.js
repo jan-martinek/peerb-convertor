@@ -83,13 +83,13 @@ function exportUnit(unit, docs) {
 
   if (unit.hasOwnProperty('preface')) delete unit.preface;
 
-  const parts = docs.map(part => {
+  const outline = docs.map(part => {
     return Object.keys(part.meta).length === 1 
       ? part.meta.filename 
       : part.meta;
   });
 
-  const yml = yaml.safeDump(Object.assign({}, unit, { parts }));
+  const yml = yaml.safeDump(Object.assign({}, unit, { outline }));
   fs.writeFileSync(path.join(curPath, dir, '_unit.yml'), yml);
 }
 

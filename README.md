@@ -1,6 +1,6 @@
 # Peer Blender course convertor tool
 
-Convert single-file units into folders based on \_unit.yml and mutliple content files.
+Convert legacy PB units into folders based on \_unit.yml and mutliple content files.
 
 ## Use
 
